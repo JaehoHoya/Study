@@ -1,7 +1,7 @@
 package textio;
-import java.util.Scanner;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 public class UserIo {
     // new 로 호출할 필요 없음 
     static Scanner kbd = new Scanner(System.in);
@@ -94,19 +94,22 @@ public class UserIo {
 
 
         } else if (menu.equals("b")) {
+             
             System.out.print("수정할 게시물의 제목을 입력해주세요:");
+             /*
             String title =kbd.nextLine();
             System.out.print("수정할 제목을 입려:");
             String newTitle=kbd.nextLine();
 
             List<BoardVo> list = DataIo.list();
+            /*
             BoardVo key = new BoardVo(title);
 
             if(list.contains(key)){
 
 
             }
-
+            */
         }
     }
 

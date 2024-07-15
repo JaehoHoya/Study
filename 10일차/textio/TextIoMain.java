@@ -20,7 +20,7 @@ public class TextIoMain {
             while (go) {
             String m= UserIo.showMenu();    //메뉴를 보여준다 
             switch (m) {
-                case "a":UserIo.add(); break;
+                case "a":UserIo.add();; break;
                 case "s":UserIo.list(); break;
                 case "f":UserIo.search(); break;
                 case "u":UserIo.update(); break;

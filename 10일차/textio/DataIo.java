@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DataIo {
 
-    static String fpath= "/Users/jeongjaeho/Desktop/풀스택 교육과정 /0715/textio/board.txt";
+    static String fpath= "/Users/jeongjaeho/Desktop/풀스택 교육과정 /10일차/textio/board.txt";
 
     public static boolean saveBoard(BoardVo b){
         try {
@@ -94,6 +94,6 @@ public class DataIo {
         }
         return null;
     }
-    
+
    */
 }
