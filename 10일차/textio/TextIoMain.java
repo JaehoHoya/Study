@@ -11,7 +11,8 @@ package textio;
 
 /* 게시판 프로그램 
  * BoardVo(번호, 제목, 작성자, 작성일, 히트수 ,본문)
- *
+ * 강사님 코드랑 비교해서 공부할것
+ * 
  * 깃허브 커맨드: MVC패턴 파악.
  */
 public class TextIoMain {   
