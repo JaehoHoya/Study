@@ -50,6 +50,7 @@ public class UserIo {
             for (int i = 0; i < list.size(); i++) {
                 System.out.println(list.get(i));
             }
+
         }else System.out.println("\t\t게시물이 존재하지 않습니다.");
     }
 
@@ -61,6 +62,7 @@ public class UserIo {
         BoardVo key = new BoardVo(no);
         if(list.contains(key)){    // 이거를 메소드 만든걸 findbyno에 만들기
             int idx=list.indexOf(key);
+            list.get(idx).setHits(idx);
             System.out.println(list.get(idx));
         }else {
             System.out.println("존재하는 번호가 아닙니다.");

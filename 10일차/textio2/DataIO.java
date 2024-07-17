@@ -48,20 +48,33 @@ public class DataIO
 		return null;
 	}
 
+	private  static  void  increaseHits(BoardVO b, List<BoardVO> list){
+
+		b.setHits(b.getHits()+1);
+		overwrite(list);
+	}
+
+
+
+
+
 	public static BoardVO findByNo(int no) {
 		List<BoardVO> list = list();
 		BoardVO key = new BoardVO(no);
 		if(list.contains(key)) {
-			return list.get(list.indexOf(key));
+			Board b=list.get(list.indexOf(key));
+			increaseHits(b,list);
 		}
-		return null;
+		return b;
 	}
 	
 	public static BoardVO findByTitle(String title) {
 		List<BoardVO> list = list();
 		for(int i=0;i<list.size();i++) {
+			BoardVO b=list.get(i);
 			if(list.get(i).getTitle().contains(title)) {
-				return list.get(i);
+				increaseHits(b,list);
+				return b;
 			}
 		}
 		return null;
@@ -94,6 +107,7 @@ public class DataIO
 			BoardVO found = list.get(list.indexOf(b));
 			found.setTitle(b.getTitle());
 			found.setContents(b.getContents());
+
 			return overwrite(list);
 		}
 		return false;

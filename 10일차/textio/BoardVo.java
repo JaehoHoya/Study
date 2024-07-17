@@ -52,7 +52,7 @@ public class BoardVo {
         SimpleDateFormat sdf =new SimpleDateFormat("yyyy-MM-dd");
         String sdate= sdf.format(regDate);
 
-        String s=String.format("번호:%d\t제목:%-20s\t작성자:%-10s\t작성일:%-10s\thit:%-10d\t내용:%-20s",
+        String s=String.format("번호:%d\t제목:%-22s\t작성자:%s\t작성일:%s\t조회:%d\t내용:%s",
                                 no,title,author,sdate,hits,contents);
         return s;
     }
@@ -95,7 +95,7 @@ public class BoardVo {
     }
 
     public void setHits(int hits) {
-        this.hits = hits;
+        this.hits =hits;
     }
 
     public String getContents() {
