@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>개발 공부</title>
+    <h1>안녕하세요</h1>
+    <h2>bye</h2>
+    <h3>ah~!</h3>
+    <script>
+        document.querySelector('h1').style.backgroundColor='red';
+        document.querySelector('h2').style.color='blue';
+
+        window.onload =function(){
+            const headers =document.querySelectorAll('h3');
+            
+            for(let i =0; i<headers.length; i++){
+                const header=headers[i];
+
+                header.style.color='green';
+                header.style.backgroundColor='pink';
+                header.innerHTML='ğood';
+            }
+
+            const image=document.getElementById('image');
+            image.src='https://postfiles.pstatic.net/20130806_160/insp9_1375743567900V8T9u_PNG/AThumbCut_130805-215016.png?type=w2';
+            image.width=300;
+            image.height=200;
+           
+
+            let output='';
+            for(let i=0; i<256; i++){
+                output+='<div></div>';
+            }
+
+                /*
+            document.body.innerHTML=output;
+            const divs=document.querySelectorAll('div');
+            for(let i=0; i<divs.length;i++){
+                const div=divs[i];
+                
+                div.style.height ='2px';
+                div.style.backgroundColor='rgb('+(i+200)+','+(i+100)+','+(i+1500)+')';
+            
+            } */
+
+        };
+
+    </script>
+</head>
+<body>
+    <style>
+    
+		h1 { text-align: center; }
+		h2 { text-align: center; }
+	</style>
+
+    <img id="image"/>
+    <h1>hello</h1>
+    <h3> ha~!</h3>
+    
+</body>
+<footer>
+    
+</footer>
+</html>
+
+
+<!--
+    window 관련 함수는 이밴트 함수? 
+    모든 h1 태그 색상을 바꾸려면 querySelectorAll
+-->
