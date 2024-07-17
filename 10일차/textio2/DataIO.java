@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-
+//
 public class DataIO 
 {
 	static String fpath = "/Users/jeongjaeho/Desktop/풀스택 교육과정 /10일차/textio2/board.txt";
