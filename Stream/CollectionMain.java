@@ -29,7 +29,7 @@ public class CollectionMain {
         System.out.println("원소의 개수:"+set.size());  // 3개 중복 x
         //순서가 없어서 루프를 돌릴수 없음  가공을 해줘야함
         Iterator<String> it= set.iterator();
-
+  //
         while(it.hasNext()){ //boolean 표현식
             String value = it.next();
             System.out.println(value);
