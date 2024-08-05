@@ -22,7 +22,7 @@ public class BoardDAO
     private Connection conn;
     private PreparedStatement pstmt;
     private ResultSet rs;
-
+   //
     private Connection getConn()
     {
         try {
