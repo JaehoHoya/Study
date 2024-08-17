@@ -1,0 +1,43 @@
+
+jsp 에서 사용하는 언어? 
+
+EL(Expression Language)-표현 언어 , 메모리에 있는 데이터를 화면에 보여주는것
+
+${user.id}  <--getID-->
+user.id = 영역에 저장되어 있는 데이터여야 함.
+
+pageContext.setAttribute("User",u);
+
+JSTL(JSP Standard Tag Library) 
+
+왜 써야하는가. 
+웹페이지를 쉽게 태그만 사용여 작성하는 기술
+HTML이 사용되느느 곳에서 java 코드를 배제한다 
+
+지금까지 한거는 서버에서 html을 다루기 때문에  어쩔 수 없이 java코드가 들어감 
+
+jsp에서 자바 코드가 안보이게 하자! 
+
+영역 :pageContext ,request, session, application
+
+적용한 jsp : 게시글 상세 보기 
+
+
+
+pageContext.setAttribute("today",new Date());
+
+날짜 그냥 출력됨 
+JSTL(JSP Standard Tag Library): 표준 태그  라이브러리를 써야함 
+왜 굳이 태그로? 자바코드를 안쓰기 위해 처리:jstl 출력:el 
+
+<c:set var="board" value="<%=b%>"  /> 이게 request.setAttribute("board",b); 로 바뀜 .? 
+
+
+모델 1 게시판 프고젝트 -> 모델 2 변환 
+-jsp 에서 EL ,JSTL 사용 
+
+-Servlet 추가 
+-Service 
+-Jsp 쳐서 사용 
+-DAO 그대로 사용 
+-VO 그대로 사용 
