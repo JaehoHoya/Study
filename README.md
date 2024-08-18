@@ -1,24 +1,78 @@
-# 1차 테스트  
-<img width="1354" alt="1" src="https://github.com/user-attachments/assets/4de2a676-0288-41ea-8e38-14987e0985c5">
-<img width="1065" alt="2" src="https://github.com/user-attachments/assets/ae18bbc7-4311-480c-bc72-0bddba4af816">
 
-<img width="597" alt="3" src="https://github.com/user-attachments/assets/bf02ef37-5ebc-493a-96d4-6ba2a8732506">
+<div align="center">
+<h2> 수업 내용 정리 </h2>
+수업을 들으면서  배운 내용을 한눈에 불 수 있기에 리드미 파일에 정리 했습니다.
+</div>
+
+## 폴더명
+  - [[1차 테스트]](#1차-테스트) 
+  - [[webModel1,2]](#웹-모델)
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+## 1차 테스트  
+
+설명: 작성 예정 
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/4de2a676-0288-41ea-8e38-14987e0985c5" alt="image" width="800" height="200" ></td>
+    <td><img src="https://github.com/user-attachments/assets/ae18bbc7-4311-480c-bc72-0bddba4af816" alt="image"width="800"height="200" ></td>
+    <td><img src="https://github.com/user-attachments/assets/bf02ef37-5ebc-493a-96d4-6ba2a8732506" alt="image"width="800"height="200" ></td>
+  </tr>
+  <tr>
+    <td>파일 업로드 목록 검색</td>
+    <td>수정 삭제</td>
+    <td>직렬화 파일</td>
+  </tr>
+</table>
+
+## 웹 모델
+
+설명: 작성 예정 
+
+간단한 도서구매 웹 모델1
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/c81fa749-e273-4ceb-9250-0f20bd2e132d" alt="image" width="800" height="200" ></td>
+    <td><img src="https://github.com/user-attachments/assets/0a272f58-020d-4ffa-a155-3b3aa118e2fb" alt="image"width="800"height="200" ></td>
+    <td><img src="https://github.com/user-attachments/assets/b0d70713-f02f-417b-a908-857586f56665" alt="image"width="800"height="200" ></td>
+  </tr>
+  <tr>
+    <td>도서 목록 페이지</td>
+    <td>상세 페이지</td>
+    <td>장바구니 페이지</td>
+  </tr>
+</table>
+
+게시물 작성 웹 모델1
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/9e73c236-58da-4a4e-ba9c-1cc177c5f08b" alt="image" width="800" height="200" ></td>
+    <td><img src="https://github.com/user-attachments/assets/85fd0844-31b6-4273-bbcf-e70855fe814c" alt="image"width="800"height="200" ></td>
+    <td><img src="https://github.com/user-attachments/assets/6960f265-34de-466e-95db-9c3a03c53d5b" alt="image"width="800"height="200" ></td>
+  </tr>
+  <tr>
+    <td>로그인</td>
+    <td>게시글 목록</td>
+    <td>게시물 입력</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/934e952f-2651-4b2e-8800-32dd1e48ca42" alt="image" width="800" height="200" ></td>
+    <td><img src="https://github.com/user-attachments/assets/91fae720-e30f-45ce-9893-7d6738ff54a4" alt="image"width="800"height="200" ></td>
+  </tr>
+  <tr>
+    <td>게시물 상세</td>
+    <td>게시물 수정</td>
+  </tr>
+</table>
 
 
-# 자바 다인나믹 웹  Model 1 ,2
-
-<img width="829" alt="도서목록" src="https://github.com/user-attachments/assets/c81fa749-e273-4ceb-9250-0f20bd2e132d">
-
-<img width="828" alt="책 상세페이지" src="https://github.com/user-attachments/assets/0a272f58-020d-4ffa-a155-3b3aa118e2fb">
-
-<img width="827" alt="장바구니 페이지" src="https://github.com/user-attachments/assets/b0d70713-f02f-417b-a908-857586f56665">
-
-<img width="272" alt="로그인" src="https://github.com/user-attachments/assets/9e73c236-58da-4a4e-ba9c-1cc177c5f08b">
-
-<img width="722" alt="게시글 목록" src="https://github.com/user-attachments/assets/85fd0844-31b6-4273-bbcf-e70855fe814c">
-
-<img width="320" alt="게시물 입력" src="https://github.com/user-attachments/assets/c1a2a49e-d776-42bc-90fa-6fa5bcfaf21f">
-
-<img width="446" alt="게시물 상세" src="https://github.com/user-attachments/assets/934e952f-2651-4b2e-8800-32dd1e48ca42">
-
-<img width="428" alt="게시글 수정" src="https://github.com/user-attachments/assets/91fae720-e30f-45ce-9893-7d6738ff54a4">
