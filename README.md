@@ -1,12 +1,12 @@
 
 <div align="center">
 <h2> 수업 내용 정리 </h2>
-수업을 들으면서  배운 내용을 한눈에 불 수 있기에 리드미 파일에 정리 했습니다.
+ 소개글 수정 예정 
 </div>
 
 ## 폴더명
-  - [[1차 테스트]](#1차-테스트) 
-  - [[webModel1,2]](#웹-모델)
+  - [1차 테스트](#1차-테스트) 자바 기초를 배우고 간단한 테스트 프로그램 작성 
+  - [webModel](#웹-모델)   모델 1,2 적용 
   -
   -
   -
@@ -16,8 +16,8 @@
   -
 ## 1차 테스트  
 
-설명: 작성 예정 
-
+### 설명
+  - 내용 작성 예정 
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/4de2a676-0288-41ea-8e38-14987e0985c5" alt="image" width="800" height="200" ></td>
@@ -33,9 +33,9 @@
 
 ## 웹 모델
 
-설명: 작성 예정 
-
-간단한 도서구매 웹 모델1
+### 설명
+  - 내용 작성 예정 
+### 도서구매 웹 모델1
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/c81fa749-e273-4ceb-9250-0f20bd2e132d" alt="image" width="800" height="200" ></td>
@@ -49,7 +49,7 @@
   </tr>
 </table>
 
-게시물 작성 웹 모델1
+### 게시물 작성 웹 모델1
 
 <table>
   <tr>
