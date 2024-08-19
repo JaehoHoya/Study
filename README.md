@@ -33,8 +33,28 @@
 
 ## 웹 모델
 
-### 설명
-  - 내용 작성 예정 
+### 설명 
+REST방식으로 개발해보았는가.
+  - 내용 작성 예정
+  - HTTP 요청 연습 ex)
+  - 모델 2
+```java
+String url= request.getRequestURI();   // /Myproject/book/detail/3 
+String token[] =url.split("/")         // [,Myproject,bool,detail,3];
+int len =token.length;
+path= Arrays.copyOfRange(token,3,len); // [detail,3]
+```
+
+`RESTful 요청  : +URL,( GET, POST,PUT, DELETE )`  
+
+`GET: 서버 -> 클라이언트  가져오기 위한 요청 (서버로 전달하는 데이터량은 상대적으로 적다 ) READ`
+
+`POST: 클라이언트 -> 서버로 데이터를 보내기 위한 요청 (서버로 양이 많은 데이터가 전달) CREATE`
+
+`PUT: UPDATE`
+`DELETE : DELETE `
+->웹에 대한 CRUD
+
 ### 도서구매 웹 모델1
 <table>
   <tr>
