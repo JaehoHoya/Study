@@ -19,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Book2Servlet</display-name>
+    <servlet-name>Book2Servlet</servlet-name>
+    <servlet-class>com.test.book.Book2Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Book2Servlet</servlet-name>
+    <url-pattern>/book2</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,10 +1,9 @@
-package com.test.book2;
+package com.test.book;
 
 import java.sql.Date;
 
-public class Book {
-
-
+public class Book2 {
+	
 	private int no; 
 	private String title;
 	private String author;
@@ -13,9 +12,18 @@ public class Book {
 	private int page ;
 	private int price ;
 	private String cover ; //책표지? 
+	private int qty;
 	
-	public Book() {};
-	public Book(int no, String title, String author, String publisher, Date pubdate, int page, int price,
+	private int totalPrice;
+	
+	public int getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(int totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+	public Book2() {};
+	public Book2(int no, String title, String author, String publisher, Date pubdate, int page, int price,
 			String cover) {
 		
 		setNo(no);
@@ -28,6 +36,29 @@ public class Book {
 		setCover(cover);
 		
 	}
+	
+	public Book2(int no,int qty) {
+		setNo(no);
+		setQty(qty);
+	};
+	
+	
+	 public int getQty() {
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+	public Book2(int no) {
+	      this.no = no;
+	   }
+	   
+	   public boolean equals(Object obj) {
+	      Book2 other = (Book2) obj;
+	      return this.no == other.no;
+	   }
+	   
+	   
 	public int getNo() {
 		return no;
 	}
