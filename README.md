@@ -94,7 +94,35 @@ path= Arrays.copyOfRange(token,3,len); // [detail,3]
     <td>게시물 수정</td>
   </tr>
 </table>
-
+### 스프링
 `@SessionAttributes("uid") : 클래스 위에 선언  세션속성 uid라는 변수가 있으면  자동으로 세션에 저장함  `
 		`@SessionAttribute(name="uid" ,requried=false) : 메소드 파라미터   -sessionGetAttribute  값이 없을때 null 에러 -> requried=false 에러 안남   로그인 검사 `
 	`	@SessionStatus : 메소드 파라미터 -sessionSetAttribute  로그아웃할때  세션에 저장되어 있는 상태 정보 `
+
+
+ `@Autowired` 
+ `@Repository`
+ `@Controller`
+`@RequestMapping`
+`@GetMapping("")`
+`@PostMapping("/login")`
+`@ResponseBody 	`	
+`@ModelAttribute`
+`@RequestParam `
+`dependency`
+
+
+
+<details>
+  <summary>첫번째토글</summary>
+  <div markdown="1">
+	  <details>
+  <summary>첫번째토글</summary>
+  <!-- 내용 -->
+</details>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </div>
+</details>
