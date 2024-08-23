@@ -126,3 +126,4 @@ path= Arrays.copyOfRange(token,3,len); // [detail,3]
     </ul>
   </div>
 </details>
+이름 없는 함수 ,람다 표현식 -메소드 한개일때만     함수형 인터페이스만 람다로   함수형 인터페이스: 메소드 한개 ,
