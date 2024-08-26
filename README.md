@@ -127,3 +127,26 @@ path= Arrays.copyOfRange(token,3,len); // [detail,3]
   </div>
 </details>
 이름 없는 함수 ,람다 표현식 -메소드 한개일때만     함수형 인터페이스만 람다로   함수형 인터페이스: 메소드 한개 ,
+
+
+
+
+--계정 생성
+CREATE USER fitizen identified BY admin;
+
+--데이터베이스 접속 권한 
+GRANT CREATE SESSION TO fitizen;
+
+--테이블 생성 권한 
+GRANT CREATE TABLE TO fitizen ;
+
+--테이블 스페이스 사용 권한 
+GRANT UNLIMITED TABLESPACE TO fitizen ;
+
+--인덱스 생성권한 
+GRANT CREATE ANY INDEX TO fitizen ;
+GRANT DROP ANY INDEX TO fitizen ;
+
+--DBA 권한 생성 
+GRANT CONNECT ,resource ,dba TO fitizen ;
+
