@@ -170,3 +170,8 @@ iBatis -> MyBatis 특징:  복잡한 쿼리에 특화? 유연성
 JPA(java Persistent API ) CRUD 만 편리함 간단한것만 
 - 생산성
   QueryDSL: 복잡한것도 괜찮다.
+
+  JPA가 포함하고 있는 메소드
+  Java Persistence API
+  CRUD 와 같은 간한한 Query 를 쉽게 자동으로 생성하여 사용가능
+  
