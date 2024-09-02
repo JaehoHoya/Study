@@ -152,6 +152,7 @@ GRANT CONNECT ,resource ,dba TO fitizen ;
 
 타임 리프는 표준태그에  반복분을 적용 가능 ->태그가 반복됨  C foreach 해도 블록이  생성되지 않음 반복됨에 따라 tr이 다수개 생성되지 않음 
 iBatis -> MyBatis 특징:  복잡한 쿼리에 특화? 유연성
+- 자동으로 DAO 클래스 생성(boilerplate code 제거) 
 - interfacce(메소드 선언)
 - XML(sql 문장을 적는다) Mapper xml  Map이란 key와 value와 같이 연결의 의미
 - 실제 DB코드를 개발자가 작성하지 않고 MyBatis가 인터페이스를 구현하여,sql을 포함한 코드를 생성  메소드안에 들어갈 sql 코드를 만들어줌 
@@ -167,7 +168,21 @@ iBatis -> MyBatis 특징:  복잡한 쿼리에 특화? 유연성
   			//Xml에 퍼함된 SQL을 자바코드에 포함하여 DB에 질의함 
   )
 
-JPA(java Persistent API ) CRUD 만 편리함 간단한것만 
+JPA(java Persistent API ) 
+-ORM(object Relational Mapping)
+-JPARepository 인터페이스에 메소드 선언 
+-findAll(): select*from board; 
+-save(): insert into board values(?,?,?) 저장,업데이트 
+-deleteById(id)
+delete(Entity)
+deleteAll()
+delete(ids)
+
+-부서 번호로 검색해서 목록을 가져오고자 한다면... 
+List<Emp> findByDeptno(20);      =select *From epm where emp =20 ;
+findByDeptnoAndJob(20,'Clerk') 이렇게 하면 sql문장 만들어짐 
+-간단한 CRUD 기능을 포함하고 JPA가 DAO 클래스를 생성 
+CRUD 만 편리함 간단한것만 
 - 생산성
   QueryDSL: 복잡한것도 괜찮다.
 
