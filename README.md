@@ -185,8 +185,15 @@ findByDeptnoAndJob(20,'Clerk') 이렇게 하면 sql문장 만들어짐
 CRUD 만 편리함 간단한것만 
 - 생산성
   QueryDSL: 복잡한것도 괜찮다.
-
+@SessionAttributes
+@SessionAttribute
+SessionStatus 
   JPA가 포함하고 있는 메소드
   Java Persistence API
   CRUD 와 같은 간한한 Query 를 쉽게 자동으로 생성하여 사용가능
-  
+
+Spring Security  
+-인증(Authentication),인가(Authorization) 
+JWT:서버로드/발란싱 상태로 여러 대일 경우,쿠키에 이용자 정보 저장(클라이언트)  
+쿠키는 http 프로토콜을 지키는    
+
