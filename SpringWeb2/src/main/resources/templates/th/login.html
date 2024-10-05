@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인 화면</title>
+</head>
+<body>
+<form action="/login" method="post" th:object="${user}">
+
+    <div>아이디 <input type="text" th:field="*{uid}" value="smith" ></div>
+
+    <div>비밀번호 <input type="password" th:field="${user.pwd}"  value="1234"></div>
+    <div>
+        <button type="reset">취소</button>
+        <button type="submit">로그인</button>
+    </div>
+</form>
+</body>
+</html>
+<!--/*
+<form th:action="@{/login/${proc}}" url expression  동적인 주소를 만들 수 있다
+value="smith" 사라짐 why uid ="" 가 넘어와서 값이 됨  form 바인딩
+
+th:field="${user.uid}"
+동적인 HTML 서버에서 바뀌여서 온거임
+<form action="/login" method="post">
+
+    <div>아이디 <input type="text" name="uid" value="smith"></div>
+    <div>비밀번호 <input type="password" name="pwd" value="1234"></div>
+    <div>
+        <button type="reset">취소</button>
+        <button type="submit">로그인</button>
+    </div>
+</form>
+
+*/-->

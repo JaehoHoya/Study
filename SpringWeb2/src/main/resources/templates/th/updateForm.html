@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>사원 정보 수정</title>
+    <style>
+        table {border:1px solid black; border-collapse: collapse; border-spacing: 0;}
+        th,td{padding: 0.2em 1em; border-right: 1px solid black;}
+        th{border-bottom: 3px double black;}
+        td{border-bottom: 1px solid black;}
+    </style>
+</head>
+<body>
+<h3>사원정보 수정</h3>
+<form action="../update" method="post" >
+    <input type="hidden" id="empno" name="empno" th:value="${detail.empno}">
+<table>
+
+    <tr><th>사번</th><th>이름</th><th>직무</th><th>메니저</th><th>입사일</th><th>급여</th><th>커미션</th><th>부선번호</th></tr>
+    <tr >
+        <td th:text="${detail.empno}"></td>
+        <td th:text="${detail.ename}"></td>
+        <td th:text="${detail.job}"></td>
+        <td th:text="${detail.mgr}"></td>
+        <td th:text="${detail.hiredate}"></td>
+        <td> <input type="text" name="deptno"></td>
+        <td th:text="${detail.comm}"></td>
+        <td> <input type="text" name="sal" ></td>
+    </tr>
+</table>
+    <button type="reset">취소</button>
+    <button type="submit">저장</button>
+</form>
+</body>
+</html>
+<!--/%
+
+
+%/-->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>도서 목록</title>
+</head>
+<body>
+<h3>도서 정보</h3>
+<table>
+    <tr><th>번호</th><th>제목</th><th>저자</th><th>출판사</th></tr>
+    <tr th:each="b:${books}">
+        <td>[[${b.no}]]</td>
+        <td>
+            <a th:href="@{book/Detail/{no}(no=${b.no})}">[[${b.title}]]</a>
+
+        </td>
+        <td>[[${b.author}]]</td>
+        <td>[[${b.publisher}]]</td>
+    </tr>
+</table>
+<a href="book/addForm"><button >도서 정보 추가 </button></a>
+</body>
+</html>
+

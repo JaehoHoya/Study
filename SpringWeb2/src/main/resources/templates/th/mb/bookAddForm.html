@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>도서 정보 추가</title>
+</head>
+<body>
+<h3>도서 정보 추가</h3>
+<form id="bookForm" action="../book/add" method="post">
+    <div>
+        <label>제목</label>
+        <input type="text" id="title" name="title" >
+    </div>
+    <div>
+        <label>저자</label>
+        <input type="text" id="author" name="author">
+    </div>
+    <div>
+        <label>출판사</label>
+        <input type="text" id="publisher" name="publisher" >
+    </div>
+    <div>
+        <label>출판일</label>
+        <input type="date" id="pubDate" name="pubDate">
+    </div>
+    <div>
+        <label>페이지</label>
+        <input type="number" id="page" name="page" >
+    </div>
+    <div>
+        <label>가격</label>
+        <input type="number" id="price" name="price"  >
+    </div>
+    <div>
+        <label>커버 이미지</label>
+        <input type="text" id="cover" name="cover"  >
+    </div>
+    <button type="submit">추가</button>
+    <a href="../book"><button type="button">취소(뒤로가기)</button></a>
+</form>
+</body>
+</html>

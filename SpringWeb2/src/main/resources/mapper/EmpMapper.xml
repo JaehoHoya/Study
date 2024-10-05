@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sku.web.mb.EmpMapper">
+    <!-- -->
+    <select id="getList"
+            resultType="com.sku.web.emp.Emp">
+            SELECT * FROM emp2
+    </select>
+
+<select id="getEmpByNo"
+        resultType="com.sku.web.emp.Emp"
+        parameterType="Integer">
+    SELECT * FROM emp2 WHERE EMPNO=#{empno}
+</select>
+
+    <update id="updateEmp"
+            parameterType="com.sku.web.emp.Emp">
+        UPDATE  EMP2 SET SAL=#{sal} , DEPTNO=#{deptno}  WHERE EMPNO=#{empno}
+        <!-- 리절트 타입 (리턴타입) 없어도 됨  -->
+    </update>
+
+    <delete id="deleteEmp"
+            parameterType="com.sku.web.emp.Emp">
+        DELETE EMP2  WHERE EMPNO=#{empno}
+        <!-- 리절트 타입 (리턴타입) 없어도 됨  -->
+    </delete>
+
+    <insert id="addAndGetKey" useGeneratedKeys="true" keyProperty="empno" keyColumn="no"
+            parameterType="com.sku.web.emp.Emp">  <!-- 파라미터가 map 이어도 가능 -->
+        INSERT INTO emp2 (empno, ename, job, sal, hiredate)
+        VALUES(empno_seq.NEXTVAL,#{ename},#{job},#{sal}, #{hiredate})
+    </insert>
+</mapper>
+        <!--/*
+         dynamic sql
+
+         SELECT * FROM book
+         <where>
+         <if test= "title != null AND title !="" >
+                AND title =#{title}  // 널이 아니고 빈 문자열이 아닌경우
+         </if>
+         <if test= "author != null AND author !="" >
+                AND author =#{author}   // AND 문법적으론 안맞지만  자동으로 지워줌 ?
+         </if>
+         </where>
+         WHERE title =#{title}
+         WHERE author=#{author}
+         WHERE title=#{title} AND author=#{author}
+
+
+
+        */ -->

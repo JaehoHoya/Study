@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+<body>
+<h1>hello world</h1>
+<div th:text="${greeting}"></div>  <!--영역에 저장된 값 가져왔넹  타임리프 표현식 el 표현식 아님  f12한번 보삼  서버에서 바껴서 옴   -->
+[[ ${greeting} ]]  <!-- 태그 속성에 오는 경우랑 다른 표현식 -->
+</body>
+</html>

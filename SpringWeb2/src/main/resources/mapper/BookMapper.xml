@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sku.web.mb.BookMapper">
+
+    <!--도서 정보 리스트  -->
+    <select id="getBookList"
+            resultType="com.sku.web.mb.Book">
+            SELECT *FROM book ORDER BY no
+    </select>
+
+    <!--도서 상세 정보  -->
+    <select id="getBookByNo"
+            resultType="com.sku.web.mb.Book"
+            parameterType="Integer">
+    SELECT * FROM book WHERE no=#{no}
+    </select>
+
+
+
+    <!--도서 정보 추가 -->
+    <insert id="addBook" parameterType="com.sku.web.mb.Book">
+        <!-- Fetch the next sequence value before the insert -->
+        <selectKey keyProperty="no" resultType="int" order="BEFORE">
+            SELECT book_seq.NEXTVAL FROM DUAL
+        </selectKey>
+        <!-- Perform the insert using the generated sequence value -->
+        INSERT INTO book (no, title, author, publisher, pubdate, page, price, cover)
+        VALUES (#{no}, #{title}, #{author}, #{publisher}, #{pubDate}, #{page}, #{price}, #{cover})
+    </insert>
+
+    <!-- 도서 정보 삭제 -->
+    <delete id="deleteBook" parameterType="int">
+        DELETE FROM book
+        WHERE no = #{no}
+    </delete>
+
+    <!--도서 정보 수정 -->
+    <update id="updateBook" parameterType="com.sku.web.mb.Book">
+        UPDATE book
+        SET
+            page = #{page},
+            price = #{price}
+        WHERE no = #{no}
+    </update>
+
+
+
+
+    <select id="searchByTitleOrAuthor"
+            resultType="com.sku.web.mb.Book"
+            parameterType="map">
+        SELECT * FROM book
+
+    <where>
+        <if test= "category.equalsIgnoreCase('title')">   AND LOWER(title)=(#{keyword}) </if>
+
+       <if  test= "category.equalsIgnoreCase('author')" >  AND LOWER(author)=LOWER(#{keyword})</if>
+    </where>
+        </select>
+
+
+    <select id="searchRange"
+            resultType="com.sku.web.mb.Book">
+
+            SELECT *FROM book WHERE PRICE BETWEEN #{low} AND #{high}
+
+    </select>
+
+
+    <select id="searchAuthor"
+            resultType="com.sku.web.mb.Book">
+        SELECT *FROM  book
+        <where>
+            <if test="author != null">
+                AND author = #{author}
+            </if>
+        </where>
+    </select>
+
+
+    <select id="pubAndPrice"
+            parameterType="com.sku.web.mb.Book"
+            resultType="com.sku.web.mb.Book">
+        SELECT *FROM  book
+        <where>
+            <if test="publisher != null">
+                AND  publisher = #{publisher}
+            </if>
+            <if test="price != 0">
+                AND  price = #{price}
+            </if>
+        </where>
+    </select>
+</mapper>
+
+
+        <!--
+
+         AND LOWER(author) =LOWER(#{keyword})
+
+         dynamic sql
+
+         SELECT * FROM book
+         <where>
+         <if test= "title != null AND title !="" >
+                AND title =#{title}  // 널이 아니고 빈 문자열이 아닌경우
+         </if>
+         <if test= "author != null AND author !="" >
+                AND author =#{author}   // AND 문법적으론 안맞지만  자동으로 지워줌 ?
+         </if>
+         </where>
+         WHERE title =#{title}
+         WHERE author=#{author}
+         WHERE title=#{title} AND author=#{author}
+
+        -->
+
+        <!--
+        <update id="updateUserStatus">
+    UPDATE User
+    <set>
+        <if test="status != null">
+            status = #{status}
+        </if>
+    </set>
+    WHERE id IN
+    <foreach item="id" collection="userIds" open="(" separator="," close=")">
+        #{id}
+    </foreach>
+</update>
+        -->
+
+        <!--
+
+
+<select id="findUsersByStatusAndAge" resultType="User">
+    SELECT id, username, email, status, age
+    FROM User
+    <where>
+        <choose>
+            <when test="status.equalsIgnoreCase('ACTIVE')">
+                AND LOWER(status) = LOWER(#{status})
+                AND age &lt;= 30
+            </when>
+            <when test="status.equalsIgnoreCase('INACTIVE')">
+                AND LOWER(status) = LOWER(#{status})
+                AND age &gt; 30
+            </when>
+            <when test="status.equalsIgnoreCase('SUSPENDED')">
+                AND LOWER(status) = LOWER(#{status})
+            </when>
+            <otherwise>
+             기본적으로 모든 사용자를 조회합니다.
+                AND status = #{status}
+            </otherwise>
+        </choose>
+    </where>
+</select>
+-->
+
+
+

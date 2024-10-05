@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>도서 정보 수정</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+<h3>도서 정보 수정</h3>
+<form id="updateForm" action="/book/update" method="post">
+    <!-- 도서 번호를 숨겨진 필드로 전달 -->
+    <input type="hidden" name="no" th:value="${book.no}" />
+
+    <div><label>제목</label>
+        <span th:text="${book.title}"></span>
+    </div>
+    <div><label>저자</label>
+        <span th:text="${book.author}"></span>
+    </div>
+    <div><label>출판사</label>
+        <span th:text="${book.publisher}"></span>
+    </div>
+    <div><label>출판일</label>
+        <span th:text="${book.pubDate}"></span>
+    </div>
+    <!-- 수정 가능한 입력 필드 -->
+    <div><label>페이지</label>
+        <input type="number" name="page" value="${book.page}" required />
+    </div>
+    <div><label>가격</label>
+        <input type="number" name="price" value="${book.price}" required />
+    </div>
+    <p>
+        <button type="reset">취소</button>
+        <button type="submit">수정</button>
+    </p>
+</form>
+</form>
+</body>
+</html>
