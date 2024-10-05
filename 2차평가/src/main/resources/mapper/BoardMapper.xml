@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.web.board.mapper.BoardMapper">
+
+    <!--게시물 추가하기 -->
+
+    <insert id="addBoard" parameterType="com.web.board.Board">
+
+        <selectKey keyProperty="bnum" resultType="int" order="BEFORE">
+            SELECT BOARD_SEQ.NEXTVAL FROM DUAL
+        </selectKey>
+        <!-- 등록 -->
+        INSERT INTO board (bnum, TITLE, contents, rdate, hit, author)
+        VALUES (#{bnum}, #{title},#{contents} , #{rdate}, #{hit}, #{author})
+    </insert>
+
+    <!--게시물 리스트  -->
+    <select id="getBoardList" resultType="com.web.board.Board">
+        SELECT
+            b.bnum,
+            b.author,
+            b.title,
+            b.contents,
+            b.rdate,
+            b.hit,
+            COALESCE(COUNT(bf.fnum), 0) AS fileCount
+        FROM
+            board b
+                LEFT JOIN boardFile bf ON b.bnum = bf.bnum
+        GROUP BY
+            b.bnum, b.author, b.title, b.contents, b.rdate, b.hit
+        ORDER BY
+            b.bnum
+    </select>
+
+    <!--게시물 상세보기-->
+    <select id="getBoardDetail"
+            resultType="com.web.board.Board"
+            parameterType="com.web.board.Board">
+
+        SELECT
+            b.bnum,
+            b.author,
+            b.title,
+            b.contents,
+            b.rdate,
+            b.hit,
+            LISTAGG(bf.fname1, ', ') WITHIN GROUP (ORDER BY bf.fname1) AS fname1,
+            LISTAGG(bf.fname2, ', ') WITHIN GROUP (ORDER BY bf.fname2) AS fname2
+        FROM
+            board b
+                LEFT JOIN
+            boardFile bf ON b.bnum = bf.bnum
+        WHERE
+            b.bnum = #{bnum}
+        GROUP BY
+            b.bnum, b.author, b.title, b.contents, b.rdate, b.hit
+    </select>
+
+
+    <!-- 게시물 수정 -->
+    <update id="updateBoard"
+            parameterType="com.web.board.Board">
+        UPDATE board
+        SET
+            title = #{title},
+            contents = #{contents},
+            rdate = #{rdate}
+        WHERE
+            bnum = #{bnum}
+    </update>
+
+    <!-- 게시물 삭제 -->
+    <delete id="deleteBoard"
+            parameterType="int">
+        DELETE FROM board
+        WHERE bnum = #{bnum}
+    </delete>
+
+
+    <!-- 제목 또는 작성자로 검색하기 -->
+    <select id="searchByTitleOrAuthor"
+            resultType="com.web.board.Board"
+            parameterType="map">
+        SELECT
+        b.bnum,
+        b.author,
+        b.title,
+        b.contents,
+        b.rdate,
+        b.hit,
+        COALESCE(COUNT(bf.fnum), 0) AS fileCount
+        FROM
+        board b
+        LEFT JOIN boardFile bf ON b.bnum = bf.bnum
+        <where>
+            <if test="category.equalsIgnoreCase('title')"> AND b.title LIKE '%' || #{keyword} || '%' </if>
+            <if test="category.equalsIgnoreCase('author')"> AND b.author LIKE '%' || #{keyword} || '%' </if>
+        </where>
+        GROUP BY
+        b.bnum, b.author, b.title, b.contents, b.rdate, b.hit
+    </select>
+
+
+
+</mapper>

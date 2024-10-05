@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            display: inline-block;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>게시판 수정페이지</h1>
+
+<form th:action="@{../update}" th:object="${b}" method="post">
+    <input type="hidden"th:field="*{bnum}" th:value="${b.bnum}"  />
+    <table>
+        <thead>
+        <tr>
+            <th>작성자</th>
+            <th>제목</th>
+            <th>내용</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Thymeleaf loop to display posts -->
+        <tr>
+            <td><input type="hidden"th:field="*{author}" th:value="${b.author}"  />[[${b.author}]]</td>
+
+            <td><input type="text" th:field="*{title}" /></td>
+            <td><input type="text" th:field="*{contents}" /></td>
+
+        </tr>
+        </tbody>
+    </table>
+    <button type="submit">수정</button>
+    <button type="reset">취소</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="http://www.thymeleaf.org/extras/thymeleaf-extras-springsecurity6" lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <form action="../board/search" method="post">
+        <label for="category">검색 기준:</label>
+        <select id="category" name="category">
+            <option value="title">제목</option>
+            <option value="author">저자</option>
+        </select>
+        <input type="text" name="keyword" id="keyword" placeholder="검색어">
+        <button type="submit">검색</button>
+    </form>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Alternate row colors */
+        tbody tr:nth-child(odd) {
+            background-color: #007bff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+            list-style: none;
+            padding: 0;
+        }
+
+        .pagination a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+
+        .pagination .current {
+            background-color: #007bff;
+            color: white;
+        }
+
+        button {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>게시판 메인페이지</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>작성자</th>
+        <th>제목</th>
+        <th>조회수</th>
+        <th>파일 개수</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Thymeleaf loop to display posts -->
+    <tr th:each=" b: ${list}">
+        <td>[[${b.bnum}]]</td>
+        <td>
+            <a th:href="@{./detail/{bnum}(bnum=${b.bnum})}">
+                [[${b.author}]]
+            </a>
+        </td>
+        <td>[[${b.title}]]</td>
+        <td>[[${b.hit}]]</td>
+        <td>[[${b.fileCount}]]</td>
+    </tr>
+    </tbody>
+</table>
+<div sec:authorize="hasAnyRole('ADMIN','USER','GUEST')">
+    <a th:href="@{./addForm}"><button>게시글 등록</button></a>
+    <a th:href="@{/logout}"><button type="button">로그아웃</button></a>
+</div>
+<div sec:authorize="isAnonymous()">
+    <a href="./loginForm"><button type="button">로그인</button></a>
+</div>
+</body>
+</html>
