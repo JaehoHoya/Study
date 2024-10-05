@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="http://www.thymeleaf.org/extras/thymeleaf-extras-springsecurity6" lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<h1>게시판 메인페이지</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>작성자</th>
+        <th>제목</th>
+        <th>조회수</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Thymeleaf loop to display posts -->
+    <tr th:each=" b: ${list}">
+        <td>[[${b.bnum}]]</td>
+        <td>
+            <a th:href="@{./detail/{bnum}(bnum=${b.bnum})}">
+                [[${b.author}]]
+            </a>
+        </td>
+        <td>[[${b.title}]]</td>
+        <td>[[${b.hit}]]</td>
+    </tr>
+    </tbody>
+</table>
+<div sec:authorize="hasAnyRole('ADMIN','USER','GUEST')">
+<a th:href="@{./addForm}"><button>게시글 등록</button></a>
+<a th:href="@{/logout}"><button type="button">로그아웃</button></a>
+</div>
+<div sec:authorize="isAnonymous()">
+    <a href="./loginForm"><button type="button">로그인</button></a>
+</div>
+</body>
+</html>
