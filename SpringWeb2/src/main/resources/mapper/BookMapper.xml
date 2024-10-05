@@ -19,7 +19,7 @@
 
 
 
-    <!--도서 정보 추가 -->
+    <!--도서 정보 추가가 -->
     <insert id="addBook" parameterType="com.sku.web.mb.Book">
         <!-- Fetch the next sequence value before the insert -->
         <selectKey keyProperty="no" resultType="int" order="BEFORE">
