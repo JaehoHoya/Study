@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS 메뉴 만들기</title>
+    <style>
+        .nav {
+            list-style: none;
+            font-weight: bold;
+            margin-bottom: 10px;
+            float: left; /* Clear floats */
+            width: 100%;
+            /* Bring the nav above everything else--uncomment if needed.
+            position: relative;
+            z-index: 5;   메뉴가 항상 위에 뜨게  다른테그보다 높이가 높다
+            */
+        }
+        .nav li {  /* 클랜스 셀렉터 공백 자손 샐렉터 */
+            float: left;  /*아이템을 왼쪽으로 */
+            margin-right: 10px;
+            position: relative; /*위치가 상대적이다 */
+        }
+        .nav a {
+            display: block;
+            padding: 5px;
+            color: #fff;
+            background-color: #333; /*검은색에 가까운 회색 */
+            text-decoration: none;  /*a태그에 밑줄을 없애겠다 */
+        }
+        .nav a:hover { /* 동적인 효과 마우스를 올리면 */
+            color: #fff;
+            background-color: #6b0c36;
+            text-decoration: underline;
+        }
+
+        /*--- DROPDOWN ---*/
+        .nav ul {
+            background-color: #fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+            /* a: 알파  메뉴가 무언가를 가려서 하면 안되니깐  0->완전 투명*/
+            background: rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+            list-style: none;
+            position: absolute; /*절대 위치 */
+            left: -9999px; /*브라우저 왼쪽 영역 밖에다 두고 커서 올리면 하위 메뉴가 나오게   Hide off-screen when not needed (this is more accessible than display: none;) */
+        }
+        .nav ul li {
+            padding-top: 1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+            float: none;
+        }
+        .nav ul a {
+            white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+        }  /* wrap ,nowrap 하위메뉴 줄바꿈 x */
+        .nav li:hover ul { /* Display the dropdown on hover */
+            left: -40px; /* 리스트 안에 있는 하위 리스트는 40px 들여쓰기 되어 나타나므로 부모와 왼쪽을 정렬하기 위함 */
+        }
+        .nav li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+            background-color: #6b0c36;
+            text-decoration: underline;
+        }
+        .nav li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+            text-decoration: none;
+        }
+        .nav li:hover ul li a:hover { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li>
+        <a href="#">Home</a>
+    </li>
+
+    <li>
+        <a href="#">About</a>
+        <ul>
+            <li><a href="#">The product</a></li>
+
+            <li><a href="#">Meet the team</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Services</a>
+
+        <ul>
+            <li><a href="#">Sevice one</a></li>
+            <li><a href="#">Sevice two</a></li>
+
+            <li><a href="#">Sevice three</a></li>
+            <li><a href="#">Sevice four</a></li>
+        </ul>
+
+    </li>
+    <li>
+        <a href="#">Product</a>
+        <ul>
+            <li><a href="#">Small product (one)</a></li>
+
+            <li><a href="#">Small product (two)</a></li>
+            <li><a href="#">Small product (three)</a></li>
+            <li><a href="#">Small product (four)</a></li>
+
+            <li><a href="#">Big product (five)</a></li>
+            <li><a href="#">Big product (six)</a></li>
+            <li><a href="#">Big product (seven)</a></li>
+
+            <li><a href="#">Big product (eight)</a></li>
+            <li><a href="#">Enormous product (nine)</a></li>
+            <li><a href="#">Enormous product (ten)</a></li>
+
+            <li><a href="#">Enormous product (eleven)</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Contact</a>
+            내가 보이는가 ..
+        <ul>
+            <li><a href="#">Out-of-hours</a></li>
+            <li><a href="#">Directions</a></li>
+
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
+
+
+
+
