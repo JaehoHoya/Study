@@ -238,7 +238,26 @@ JWT:서버로드/발란싱 상태로 여러 대일 경우,쿠키에 이용자 �
  - 목록의 각 행은 배경을 번갈아 다르게 설정
  - jQuery, AJAX 등을 적절히 활용
 
+## Python 
 
+1. 회원분류
+  - 회원의 정보를 이용하여 유사도를 기준으로 몇개의 그룹으로 분류
+  - 분류된 회원은 한 그룹 안에서 공통점을 찾고 아직 갖추지 못한 회원을 탐색
+  - 탐색된 회원에게 판촉 메일을 보낸다(여행상품, 소설권유, 운동소개 등...)
+  - 회원정보 부족시 ChatGPT를 통해 실제와 유사하게 생성하여 사용
+  - Gower 유사도, DBSCAN(밀도기반 Clustering), RDBMS(SQL)
+
+2. 행동분류
+  - 행동은 시계열(Time Series) 데이터이므로 시계열 데이터에 특화된 LSTM 활용
+  - Blender 애니메이션을 통해 유사한 비디오 생성
+  - mp4 비디오로부터 Google Mediapipe를 통해 Landmark(관절좌표) 추출
+  - Google Tensorflow, Google Mediapipe, Blender 3D
+
+3. NLP(Natural Language Processing)
+  - 텍스트 생성, 분류, 평점, 문법검사
+  - LLM(Large Language Model)
+  - Hugging Face에서 다운로드 > 로컬에서 Ollama를 이용하여 실행
+  - Langchain 을 사용하여 LLM 사용시 chain, prompt engineering 지원됨
 
 
 ## 오류
