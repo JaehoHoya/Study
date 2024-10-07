@@ -259,7 +259,16 @@ JWT:서버로드/발란싱 상태로 여러 대일 경우,쿠키에 이용자 �
   - Hugging Face에서 다운로드 > 로컬에서 Ollama를 이용하여 실행
   - Langchain 을 사용하여 LLM 사용시 chain, prompt engineering 지원됨
 
+ANN ( Artificial Neural Network ) : 인공 신경망 
+-  에러가 최소인점 을 찾는다 기울기는 0 
+f(x) =x^2 -4x +3  x: 는 우리가 준 데이터  학습용 데이터( ex : 10만개 데이이터)
+ -4 : 계수, 비중, 가중치 (rate)
+  3 : 높이 , bias 
 
+  y= 2x +3 
+  실제값: x=3 ,y=5  (3월인데 주가가 5 ) 
+  예축값: x=3 일때 y= 9    손실 발생? 
+  y= 5가 되기 위해   2 ,3 (파라미터 : 컴퓨터가 바꿀 수 있는 값)을 바꾼다  가중치와 bias 
 ## 오류
 
 
