@@ -286,7 +286,13 @@ RAG (Retrieval Augmented Generation )
 
 Vector Store  :Embedding 방법으로 벡터 생성 저장/검색 
 Vector Store  :파일이나 캐시 서버에 저장하고 필요시 호출 
+로컬 언어모델을 사용해본경험 랭체인 올라마 그 파일에 llm , gpt reg 서비스  redis 
 
+챗봇은 서버 불필요 
+FastAPI 불필요 REST FULL API
+java, javascript 에서 접속 가능 
+
+추천 , LSTM 같은경우는 서버가 필요 
 ## 오류
 
 
