@@ -55,6 +55,8 @@ path= Arrays.copyOfRange(token,3,len); // [detail,3]
 `DELETE : DELETE `
 ->웹에 대한 CRUD
 
+
+
 ### 도서구매 웹 모델1
 <table>
   <tr>
@@ -276,6 +278,15 @@ f(x) =x^2 -4x +3  x: 는 우리가 준 데이터  학습용 데이터( ex : 10�
     -httpClient  서버이면서 클라이언트 역할을 한다 
 
 AI server(Fast API ) 
+
+
+RAG (Retrieval Augmented Generation )
+-Retriecal : 관련 도메인 문서에서 검색 
+- Generation : 검색된 내용을 생성 모데레 전달하여 강화된 답변 생성
+
+Vector Store  :Embedding 방법으로 벡터 생성 저장/검색 
+Vector Store  :파일이나 캐시 서버에 저장하고 필요시 호출 
+
 ## 오류
 
 
