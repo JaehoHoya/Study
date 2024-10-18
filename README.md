@@ -292,7 +292,31 @@ Vector Store  :파일이나 캐시 서버에 저장하고 필요시 호출
 FastAPI 불필요 REST FULL API
 java, javascript 에서 접속 가능 
 
-추천 , LSTM 같은경우는 서버가 필요 
+FastAPI 
+- Web Server(AI)
+- Recommend System
+- ChatGPT RAG 
+- GAN/ LSTM Model
+- 추천 , LSTM 같은경우는 서버가 필요 
+
+-실습 
+-- local , Anaconda 
+-- activate pytorch_env 환경 
+-- Tensorflow Matplotlib 설치 
+-- Sine 파 곡선을 추정할 수 있는 회귀 모델을 Tensorflow으로 작성 
+-- 학습 / 학습 성능 차트로 확인  
+-- sampleReg.keras 파일에 저장  
+-- loaded_model을 사용하여 predict() 테스트 
+-- FastAPI 웹에 배포 
+-- FAstAPI , app.py 에  이 모델을 서비스할 수 있는 함수 선언 ( async def getReg(xvalue :Regreq(클래스)): 
+-- java 프로그램을 실행하여  getReg 를 호출하여  그 결과를 화면에 표시해보기 
+-- getReg()가  호출 되면 .....
+-- sampleReg.keras 모델 로드 
+-- pred = loadded_model.predict( 이용자가 전할한 값) 
+-- return pred 
+-- 웹브라우저에서 http://localhost:8000/reg/3.141592 으로 전달했을때  0 에 근사한 값이 표시되면 성공 
+우리가 사용했던 가상환경 설치된 모듈 을 다 기억해야 다른 컴퓨터에서도 돌릴수 있다는 점을 참고할 것. 즉 환경을 똑같이 맞춰야 한다는 점 
+우리는 레그 서비스를 만들기 위해  fastapi를 쓰는거임 ㅇㅋ? ㅇㅖ지가 없으니깐 나중에 면접질문 
 ## 오류
 
 
