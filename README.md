@@ -319,7 +319,12 @@ FastAPI
 우리는 레그 서비스를 만들기 위해  fastapi를 쓰는거임 ㅇㅋ? ㅇㅖ지가 없으니깐 나중에 면접질문 
 cnn  : 이미지분류, 회귀 
 lstm : 시계열 분석  분류 회귀 
-gan  : 적대적 생성           
+gan  : 적대적 생성     
+## GAN 
+generative(생성) ,Adversarity(적대적) 
+Network(신경망) 
+
+
 ## 오류
 
 
