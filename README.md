@@ -321,9 +321,16 @@ cnn  : 이미지분류, 회귀
 lstm : 시계열 분석  분류 회귀 
 gan  : 적대적 생성     
 ## GAN 
+discriminator 판별자 
 generative(생성) ,Adversarity(적대적) 
 Network(신경망) 
+-시계열 데이터를 기준으로 판별할 수 있어야 하므로 	LSTM으로 구성하는 것이 바람직 
+-생성자는 시계열 데이터를 생성할 수 있어야 한다 
 
+Time Series(시계열) 
+-Lstm (long short Term Memmory) 
+-분류: Sequence ( 특정 시점 구간 내에서 발생하는 데이터의 집합) 
+-회귀: Sequence 내의 데이터의 집합을 숫자로 산출한다 
 
 ## 오류
 
