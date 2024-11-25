@@ -337,7 +337,7 @@ Time Series(시계열)
 
 
 ## 오류
-
+Thymeleaf 데이터를 JavaScript에서 JSON 형식으로 인식하려면 ${} 안에서 th:inline="javascript"를 사용해야 합니다
 
 트랜잭션 사용해 봤나요?
 어떤 식으로 사용했나요?
