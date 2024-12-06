@@ -59,6 +59,46 @@ AWS 환경에 적응 하기
 - Virtual Private Cloud 사이드바 클릭 ->vpc
 - vpc 생성 -> vpc만 -> 이름 ->IPv4 CIDR 블록 :수동?->IPv4 CIDR: ABC클래스 사설망10.0.0.0/16 16으로하면 사설망안에 많은 컴퓨터를 듈수 있다?
 - 서브넷 마스크가 16 
+- vpc생성
+  
+```
+VPC 생성
+ - Virtual Private Cloud(가상 사설 네트워크)
+ - 각자 Region(지역)을 정해서 생성
+
+Internet Gateway 생성 
+ - VPC 가 외부로 트랙픽을 전송하기 위한 관문
+ - VPC에 연결
+
+Subnet 생성
+ - VPC 안에 내부 네트워크 생성
+
+Routing Table 생성
+ - 트래픽의 방향 설정
+ - 내부 트래픽 : VPC 내부로 전달되는 트래픽
+ - 외부 트래픽 : VPC를 벗어나 인터넷으로 전달되는 트래픽
+ - 서브넷과 연결
+- 라우티에서 대상 대상 컬럼이 있는데  트래픽의목적지가 10.0.0.0/16 내부?, 
+- 라우팅 편집 ,
+
+인스턴스 생성(웹서버)
+ - VPC, Subnet 연결
+ - Nginx 설치, 실행
+ - 웹브라우저로 접속 테스트
+ - 웹페이지 변경 및 적용/웹브라우저로 테스트
+
+```
+
+- 비젼 : 버지니아 북부 이게 뭔지 알것 
+
+<img width="684" alt="스크린샷 2024-12-06 오후 1 20 15" src="https://github.com/user-attachments/assets/c6d24e40-7743-45b0-8017-8d207c4a42ff">
+
+<img width="822" alt="스크린샷 2024-12-06 오후 1 23 08" src="https://github.com/user-attachments/assets/20a1dcb0-54b9-48e1-afc9-1a9ce1751c0c">
+<img width="1430" alt="스크린샷 2024-12-06 오후 1 34 27" src="https://github.com/user-attachments/assets/109a2091-3148-4d6a-93dc-f9b3dd2888b1">
+<img width="1656" alt="스크린샷 2024-12-06 오후 1 34 36" src="https://github.com/user-attachments/assets/a8918f22-0c7e-4dc9-9d14-ed5d0c973a37">
+- 라우팅 편집 끝나면 서브넷 연결 편집 연결
+- ec2 인스턴스 검색 인스턴스
+<img width="840" alt="스크린샷 2024-12-06 오후 1 45 57" src="https://github.com/user-attachments/assets/fd589160-c37f-47ba-b0b3-7d96dcad45cf">
 
 
 <div align="center">
