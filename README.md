@@ -1,3 +1,21 @@
+CI / CD 
+- Continuous integration ( 지속적인 통합 )
+- Continuous Delivery( 지속적 전달 )
+- Continuous Deployment( 지속적인 배포)
+
+통합 : GitHub 
+운용 : AWS(Linux)
+
+코드 통합과 운용 시스템에 배포하는 것을 자동화 
+- Docker
+- Jenkins
+
+AWS 환경에 적응 하기 
+- AWS에서 Nginx 웹서버 운용 
+
+
+
+
 
 <div align="center">
 <h2> 수업 내용 정리 </h2>
