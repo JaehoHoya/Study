@@ -25,7 +25,7 @@ AWS 환경에 적응 하기
 - 웹서버 실행 ,웹브라우저로 접속( public-ip)
 - (전세계 공인 아이피 )
 - EC2 인스턴스에 원격 접속하여 리눅스 명령어로 설정 -
-
+- Telnet > SSH( PuTTy)
 
 <div align="center">
 <h2> 수업 내용 정리 </h2>
