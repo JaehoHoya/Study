@@ -5,6 +5,9 @@ CI / CD
 
 - 코드작성 > 깃허브에 통합 > 배포 > 실행
 - java project > jar(패키징) > github > Webhook > AWS > jenkins 스크립트 실행 > github 복제 > 실행
+- ,,,,,,,,, 가발자,,,,,,,,, github  ,,,,,,,,,,,,,, jenkins
+
+<br>
 통합 : GitHub 
 운용 : AWS(Linux)
 
