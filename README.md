@@ -3,6 +3,8 @@ CI / CD
 - Continuous Delivery( 지속적 전달 )
 - Continuous Deployment( 지속적인 배포)
 
+- 코드작성 > 깃허브에 통합 > 배포 > 실행
+- java project > jar(패키징) > github > Webhook > AWS > jenkins 스크립트 실행 > github 복제 > 실행
 통합 : GitHub 
 운용 : AWS(Linux)
 
