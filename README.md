@@ -1,3 +1,23 @@
+설정했던거 로드 ->어셉트 ec2-user 
+<br>
+https://velog.io/@gayeong39/Mac-OS-%EC%97%90-Putty-%EC%84%A4%EC%B9%98
+<br>
+sudo yum update -y
+<br>
+sudo amazon-linux-extras enable nginx1
+<br>
+sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+<br>
+sudo xcodebuild -license
+<br>
+sudo amazon-linux-extras enable nginx1
+<br>
+sudo yum install nginx -y
+<br>
+sudo systemctl start nginx
+sudo systemctl enable nginx
+<br>
+/usr/share/nginx/html/index.html
 CI / CD 
 - Continuous integration ( 지속적인 통합 )
 - Continuous Delivery( 지속적 전달 )
