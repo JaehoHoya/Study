@@ -1,4 +1,5 @@
 설정했던거 로드 ->어셉트 ec2-user 
+
 <br>
 https://velog.io/@gayeong39/Mac-OS-%EC%97%90-Putty-%EC%84%A4%EC%B9%98
 <br>
